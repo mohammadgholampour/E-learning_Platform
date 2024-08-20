@@ -1,0 +1,19 @@
+<!-- courses/templates/courses/course_detail.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ course.title }}</title>
+</head>
+<body>
+    <h1>{{ course.title }}</h1>
+    <p>{{ course.description }}</p>
+
+    <h2>Lessons</h2>
+    <ul>
+        {% for lesson in course.lessons.all %}
+        <li>{{ lesson.title }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
